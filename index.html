@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Image Grid</title>
+    <style>
+      /* Set the width of the grid and the cells */
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 10px;
+        margin: 20px;
+      }
+
+      .cell {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        text-align: center; /* Add text align center to center the text horizontally */
+		position: relative;
+      }
+
+      /* Set the style of the images */
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        cursor: pointer; /* Add cursor pointer to indicate images are clickable */
+      }
+
+      /* Add a class to turn an image black */
+      .black {
+        filter: brightness(50%) grayscale(100%);
+      }
+	  
+	  /* Set the style of the text */
+	  .text {
+	    top: 0;
+	    left: 0;
+	    right: 0;
+	    bottom: 0;
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+	    z-index: 1;
+	    color: #fff;
+	    font-size: 24px;
+	    font-family: Arial, sans-serif;
+	    text-align: center;
+	    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+	    background-color: rgba(0, 0, 0, 0.5);
+	  }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div class="cell"><div class="text">Marcio</div><img src="images/avatar_0.png" onclick="toggleBlack(this)"></div>
+      <div class="cell"><div class="text">Juan</div><img src="images/avatar_1.png" onclick="toggleBlack(this)"></div>
+      <div class="cell"><div class="text">Sergio</div><img src="images/avatar_3.png" onclick="toggleBlack(this)"></div>
+      <div class="cell"><div class="text">Ricardo</div><img src="images/avatar_2.png" onclick="toggleBlack(this)"></div>
+      <div class="cell"><div class="text">Jose</div><img src="images/avatar_4.png" onclick="toggleBlack(this)"></div>
+      <div class="cell"><div class="text">Amarildo</div><img src="images/avatar_5.png" onclick="toggleBlack(this)"></div>
+      <div class="cell"><div class="text">Wagner</div><img src="images/avatar_6.png" onclick="toggleBlack(this)"></div>
+      <div class="cell"><div class="text">Vanessa</div><img src="images/avatar_7.png" onclick="toggleBlack(this)"></div>
+      <div class="cell"><div class="text">Alexandre</div><img src="images/avatar_8.png" onclick="toggleBlack(this)"></div>
+      <div class="cell"><div class="text">Sandra</div><img src="images/avatar_9.png" onclick="toggleBlack(this)"></div>
+      <div class="cell"><div class="text">Fabiola</div><img src="images/avatar_10.png" onclick="toggleBlack(this)"></div>
+      <div class="cell"><div class="text">Fred</div><img src="images/avatar_11.png" onclick="toggleBlack(this)"></div>
+      <div class="cell"><div class="text">XPTO</div><img src="images/avatar_12.png" onclick="toggleBlack(this)"></div>
+      <div class="cell"><div class="text">Nanda</div><img src="images/avatar_13.png" onclick="toggleBlack(this)"></div>
+      <div class="cell"><div class="text">Lorenzo</div><img src="images/avatar_14.png" onclick="toggleBlack(this)"></div>
+      <div class="cell"><div class="text">Caco</div><img src="images/avatar_15.png" onclick="toggleBlack(this)"></div>
+      <div class="cell"><div class="text">Barbie</div><img src="images/avatar_16.png" onclick="toggleBlack(this)"></div>
+      <div class="cell"><div class="text">Cezar White</div><img src="images/avatar_17.png" onclick="toggleBlack(this)"></div>
+      <div class="cell"><div class="text">Sidarta</div><img src="images/avatar_18.png" onclick="toggleBlack(this)"></div>
+      <div class="cell"><div class="text">Ghandi</div><img src="images/avatar_19.png" onclick="toggleBlack(this)"></div>
+      <div class="cell"><div class="text">Paraat</div><img src="images/avatar_20.png" onclick="toggleBlack(this)"></div>
+      <div class="cell"><div class="text">Mia</div><img src="images/avatar_21.png" onclick="toggleBlack(this)"></div>
+      <div class="cell"><div class="text">Bernardo</div><img src="images/avatar_22.png" onclick="toggleBlack(this)"></div>
+      <div class="cell"><div class="text">Nicolau</div><img src="images/avatar_23.png" onclick="toggleBlack(this)"></div>
+    </div>
+    
+    <script>
+      function toggleBlack(img) {
+        if (img.classList.contains("black")) {
+          img.classList.remove("black");
+        } else {
+          img.classList.add("black");
+        }
+      }
+    </script>
+  </body>
+</html>
