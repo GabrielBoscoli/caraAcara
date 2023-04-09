@@ -117,14 +117,14 @@
         }
       }
 	  
-	  var toggleBtn = document.getElementById("toggleBtn");
-	  var images = document.getElementsByTagName("img");
-	  var texts = document.getElementsByClassName("text");
-	  var optionOnePath = "images/optionOne/";
-	  var optionOneSources = "images/optionOne/avatar_index.png";
-	  var optionTwoSources = "images/optionTwo/xavatario_index.png";
-	  var optionTwoNames = ["Fargo", "Dartanhar", "Magnetico", "Samuel", "Belinda", "Amaral", "Iza", "Vanessa", "Magda", "Sandra", "Fabiola", "Magenta", "Rick", "Nanda", "Van", "Muna", "Barbie", "Gargamel", "Aperol", "Marco", "Bento", "Cruzes", "Saicali", "Wonca"]
-	  var optionOneNames = ['Marcio', 'Juan', 'Sergio', 'Ricardo', 'Jose', 'Amarildo', 'Wagner', 'Vanessa', 'Alexandre', 'Sandra', 'Fabiola', 'Fred', 'XPTO', 'Nanda', 'Lorenzo', 'Caco', 'Barbie', 'Cezar White', 'Sidarta', 'Ghandi', 'Paraat', 'Mia', 'Bernardo', 'Nicolau']
+	  const toggleBtn = document.getElementById("toggleBtn");
+	  const images = document.getElementsByTagName("img");
+	  const texts = document.getElementsByClassName("text");
+	  const optionOnePath = "images/optionOne/";
+	  const optionOneSources = "images/optionOne/avatar_index.png";
+	  const optionTwoSources = "images/optionTwo/xavatario_index.png";
+	  const optionTwoNames = ["Fargo", "Dartanhar", "Magnetico", "Samuel", "Belinda", "Amaral", "Iza", "Vanessa", "Magda", "Sandra", "Fabiola", "Magenta", "Rick", "Nanda", "Van", "Muna", "Barbie", "Gargamel", "Aperol", "Marco", "Bento", "Cruzes", "Saicali", "Wonca"]
+	  const optionOneNames = Array.from(document.querySelectorAll('.text')).map(text => text.textContent);
 	  
 	  toggleBtn.addEventListener("click", function() {
 			for (var i = 0; i < images.length; i++) {
