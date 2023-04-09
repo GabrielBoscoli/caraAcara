@@ -81,8 +81,8 @@
     <div class="grid">
       <div class="cell"><div class="text">Marcio</div><img src="images/optionOne/avatar_0.png" onclick="toggleBlack(this)"></div>
       <div class="cell"><div class="text">Juan</div><img src="images/optionOne/avatar_1.png" onclick="toggleBlack(this)"></div>
-      <div class="cell"><div class="text">Sergio</div><img src="images/optionOne/avatar_3.png" onclick="toggleBlack(this)"></div>
-      <div class="cell"><div class="text">Ricardo</div><img src="images/optionOne/avatar_2.png" onclick="toggleBlack(this)"></div>
+      <div class="cell"><div class="text">Sergio</div><img src="images/optionOne/avatar_2.png" onclick="toggleBlack(this)"></div>
+      <div class="cell"><div class="text">Ricardo</div><img src="images/optionOne/avatar_3.png" onclick="toggleBlack(this)"></div>
       <div class="cell"><div class="text">Jose</div><img src="images/optionOne/avatar_4.png" onclick="toggleBlack(this)"></div>
       <div class="cell"><div class="text">Amarildo</div><img src="images/optionOne/avatar_5.png" onclick="toggleBlack(this)"></div>
       <div class="cell"><div class="text">Wagner</div><img src="images/optionOne/avatar_6.png" onclick="toggleBlack(this)"></div>
@@ -119,16 +119,21 @@
 	  
 	  var toggleBtn = document.getElementById("toggleBtn");
 	  var images = document.getElementsByTagName("img");
+	  var texts = document.getElementsByClassName("text");
 	  var optionOnePath = "images/optionOne/";
 	  var optionOneSources = "images/optionOne/avatar_index.png";
 	  var optionTwoSources = "images/optionTwo/xavatario_index.png";
+	  var optionTwoNames = ["Fargo", "Dartanhar", "Magnetico", "Samuel", "Belinda", "Amaral", "Iza", "Vanessa", "Magda", "Sandra", "Fabiola", "Magenta", "Rick", "Nanda", "Van", "Muna", "Barbie", "Gargamel", "Aperol", "Marco", "Bento", "Cruzes", "Saicali", "Wonca"]
+	  var optionOneNames = ['Marcio', 'Juan', 'Sergio', 'Ricardo', 'Jose', 'Amarildo', 'Wagner', 'Vanessa', 'Alexandre', 'Sandra', 'Fabiola', 'Fred', 'XPTO', 'Nanda', 'Lorenzo', 'Caco', 'Barbie', 'Cezar White', 'Sidarta', 'Ghandi', 'Paraat', 'Mia', 'Bernardo', 'Nicolau']
 	  
 	  toggleBtn.addEventListener("click", function() {
 			for (var i = 0; i < images.length; i++) {
 				if (images[i].src.includes(optionOnePath)) {
 					images[i].src = optionTwoSources.replace("index", i);
+					texts[i].innerHTML = optionTwoNames[i];
 				} else {
 					images[i].src = optionOneSources.replace("index", i);
+					texts[i].innerHTML = optionOneNames[i];
 				}
 			}
 		});
